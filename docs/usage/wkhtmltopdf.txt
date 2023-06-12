@@ -212,6 +212,7 @@ Headers And Footer Options:
       --footer-center <text>          Centered footer text
       --footer-font-name <name>       Set footer font name (default Arial)
       --footer-font-size <size>       Set footer font size (default 12)
+      --footer-font-color <color>     Set footer color (default #000000)
       --footer-html <url>             Adds a html footer
       --footer-left <text>            Left aligned footer text
       --footer-line                   Display line above the footer
@@ -223,6 +224,7 @@ Headers And Footer Options:
       --header-center <text>          Centered header text
       --header-font-name <name>       Set header font name (default Arial)
       --header-font-size <size>       Set header font size (default 12)
+      --header-font-color <color>     Set header color (default #000000)
       --header-html <url>             Adds a html header
       --header-left <text>            Left aligned header text
       --header-line                   Display line below the header
