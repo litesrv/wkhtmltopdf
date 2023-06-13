@@ -137,6 +137,7 @@ struct DLL_LOCAL ReflectImpl<HeaderFooter>: public ReflectClass {
 	ReflectImpl(HeaderFooter & c) {
 		WKHTMLTOPDF_REFLECT(fontSize);
 		WKHTMLTOPDF_REFLECT(fontName);
+		WKHTMLTOPDF_REFLECT(fontColor);
 		WKHTMLTOPDF_REFLECT(left);
 		WKHTMLTOPDF_REFLECT(right);
 		WKHTMLTOPDF_REFLECT(center);
@@ -356,6 +357,7 @@ Size::Size():
 HeaderFooter::HeaderFooter():
 	fontSize(12),
 	fontName("Arial"),
+	fontColor(""),
 	left(""),
 	right(""),
 	center(""),

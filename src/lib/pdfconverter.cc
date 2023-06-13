@@ -622,7 +622,7 @@ void PdfConverterPrivate::endPage(PageObject & object, bool hasHeaderFooter, int
 		//Guess the height of the header text
 		painter->setFont(QFont(s.header.fontName, s.header.fontSize));
 		//Set Color
-		if (!s.header.color.isEmpty()) painter->setPen(QColor(s.header.color));
+		if (!s.header.fontColor.isEmpty()) painter->setPen(QColor(s.header.fontColor));
 		int dy = painter->boundingRect(0, 0, w, h, Qt::AlignTop, "M").height();
 		//Draw the header text
 		QRect r=QRect(0, 0-dy-spacing, w, h);
@@ -636,7 +636,7 @@ void PdfConverterPrivate::endPage(PageObject & object, bool hasHeaderFooter, int
 		//Guess the height of the footer text
 		painter->setFont(QFont(s.footer.fontName, s.footer.fontSize));
 		//Set Color
-		if (!s.footer.color.isEmpty()) painter->setPen(QColor(s.footer.color));
+		if (!s.footer.fontColor.isEmpty()) painter->setPen(QColor(s.footer.fontColor));
 		dy = painter->boundingRect(0, 0, w, h, Qt::AlignTop, "M").height();
 		//Draw the footer text
 		r=QRect(0,0,w,h+dy+ spacing);

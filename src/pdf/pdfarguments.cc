@@ -273,7 +273,7 @@ PdfCommandLineParser::PdfCommandLineParser(PdfGlobal & s, QList<PdfObject> & ps)
  	addarg("footer-center",0,"Centered footer text", new QStrSetter(od.footer.center,"text"));
  	addarg("footer-font-name",0,"Set footer font name", new QStrSetter(od.footer.fontName,"name"));;
  	addarg("footer-font-size",0,"Set footer font size", new IntSetter(od.footer.fontSize,"size"));
- 	addarg("footer-font-color",0,"Set footer font color", new QStrSetter(od.footer.color,"color"));
+ 	addarg("footer-font-color",0,"Set footer font color", new QStrSetter(od.footer.fontColor,"color"));
  	addarg("footer-left",0,"Left aligned footer text", new QStrSetter(od.footer.left,"text"));
  	addarg("footer-line",0,"Display line above the footer", new ConstSetter<bool>(od.footer.line,true));
  	addarg("no-footer-line",0,"Do not display line above the footer", new ConstSetter<bool>(od.footer.line,false));
@@ -283,7 +283,7 @@ PdfCommandLineParser::PdfCommandLineParser(PdfGlobal & s, QList<PdfObject> & ps)
  	addarg("header-center",0,"Centered header text", new QStrSetter(od.header.center,"text"));
  	addarg("header-font-name",0,"Set header font name", new QStrSetter(od.header.fontName,"name"));
  	addarg("header-font-size",0,"Set header font size", new IntSetter(od.header.fontSize,"size"));
- 	addarg("header-font-color",0,"Set header font color", new QStrSetter(od.header.color,"color"));
+ 	addarg("header-font-color",0,"Set header font color", new QStrSetter(od.header.fontColor,"color"));
  	addarg("header-left",0,"Left aligned header text", new QStrSetter(od.header.left,"text"));
  	addarg("header-line",0,"Display line below the header", new ConstSetter<bool>(od.header.line,true));
  	addarg("no-header-line",0,"Do not display line below the header", new ConstSetter<bool>(od.header.line,false));
