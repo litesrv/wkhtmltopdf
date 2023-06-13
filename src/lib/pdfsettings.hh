@@ -153,7 +153,7 @@ struct DLL_PUBLIC HeaderFooter {
 	int fontSize;
 	//! Name of font used to render text
 	QString fontName;
-	// !Color if font used to render text
+	//! Color if font used to render text
 	QString fontColor;
 	//! Text to render at the left
 	QString left;
