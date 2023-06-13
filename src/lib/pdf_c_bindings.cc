@@ -87,6 +87,7 @@
  * terms of the header.
  * - \b header.fontSize The font size to use for the header, e.g. "13"
  * - \b header.fontName The name of the font to use for the header. e.g. "times"
+ * - \b header.fontColor The color of the font to use for the header. e.g. "#000000"
  * - \b header.left The string to print in the left part of the header, note that some sequences
  *      are replaced in this string, see the wkhtmltopdf manual.
  * - \b header.center The text to print in the center part of the header.
