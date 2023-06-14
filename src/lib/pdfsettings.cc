@@ -364,7 +364,7 @@ HeaderFooter::HeaderFooter():
 	center(""),
 	line(false),
 	htmlUrl(""),
-	spacing(0.0) {},
+	spacing(0.0),
     lineSpacing(0.0) {}
 
 Margin::Margin():
