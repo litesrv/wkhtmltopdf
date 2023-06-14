@@ -635,7 +635,7 @@ void PdfConverterPrivate::endPage(PageObject & object, bool hasHeaderFooter, int
 		if (!s.header.fontColor.isEmpty()) painter->setPen(QColor(s.header.fontColor));
 		int dy = painter->boundingRect(0, 0, w, h, Qt::AlignTop, "M").height();
 		//Draw the header text
-		QRect r=QRect(0, 0-dy-spacing, w, h);
+		QRect r=QRect(0, 0-dy-spacing, w, h + s.header.lineSpacing);
 		painter->drawText(r, Qt::AlignTop | Qt::AlignLeft, hfreplace(s.header.left, parms));
 		painter->drawText(r, Qt::AlignTop | Qt::AlignHCenter, hfreplace(s.header.center, parms));
 		painter->drawText(r, Qt::AlignTop | Qt::AlignRight, hfreplace(s.header.right, parms));
@@ -649,7 +649,7 @@ void PdfConverterPrivate::endPage(PageObject & object, bool hasHeaderFooter, int
 		if (!s.footer.fontColor.isEmpty()) painter->setPen(QColor(s.footer.fontColor));
 		dy = painter->boundingRect(0, 0, w, h, Qt::AlignTop, "M").height();
 		//Draw the footer text
-		r=QRect(0,0,w,h+dy+ spacing);
+		r=QRect(0,0,w,h + dy + spacing - s.footer.lineSpacing);
 		painter->drawText(r, Qt::AlignBottom | Qt::AlignLeft, hfreplace(s.footer.left, parms));
 		painter->drawText(r, Qt::AlignBottom | Qt::AlignHCenter, hfreplace(s.footer.center, parms));
 		painter->drawText(r, Qt::AlignBottom | Qt::AlignRight, hfreplace(s.footer.right, parms));

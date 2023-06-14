@@ -276,6 +276,7 @@ PdfCommandLineParser::PdfCommandLineParser(PdfGlobal & s, QList<PdfObject> & ps)
  	addarg("footer-font-color",0,"Set footer font color", new QStrSetter(od.footer.fontColor,"color"));
  	addarg("footer-left",0,"Left aligned footer text", new QStrSetter(od.footer.left,"text"));
  	addarg("footer-line",0,"Display line above the footer", new ConstSetter<bool>(od.footer.line,true));
+    addarg("footer-line-spacing",0,"Spacing between footer and footer line in mm", new FloatSetter(od.footer.lineSpacing,"real"));
  	addarg("no-footer-line",0,"Do not display line above the footer", new ConstSetter<bool>(od.footer.line,false));
  	addarg("footer-right",0,"Right aligned footer text", new QStrSetter(od.footer.right,"text"));
  	addarg("footer-spacing",0,"Spacing between footer and content in mm", new FloatSetter(od.footer.spacing,"real"));
@@ -286,6 +287,7 @@ PdfCommandLineParser::PdfCommandLineParser(PdfGlobal & s, QList<PdfObject> & ps)
  	addarg("header-font-color",0,"Set header font color", new QStrSetter(od.header.fontColor,"color"));
  	addarg("header-left",0,"Left aligned header text", new QStrSetter(od.header.left,"text"));
  	addarg("header-line",0,"Display line below the header", new ConstSetter<bool>(od.header.line,true));
+ 	addarg("header-line-spacing",0,"Spacing between header and header line in mm", new FloatSetter(od.header.lineSpacing,"real"));
  	addarg("no-header-line",0,"Do not display line below the header", new ConstSetter<bool>(od.header.line,false));
  	addarg("header-right",0,"Right aligned header text", new QStrSetter(od.header.right,"text"));
  	addarg("header-spacing",0,"Spacing between header and content in mm", new FloatSetter(od.header.spacing,"real"));

@@ -144,6 +144,7 @@ struct DLL_LOCAL ReflectImpl<HeaderFooter>: public ReflectClass {
 		WKHTMLTOPDF_REFLECT(line);
 		WKHTMLTOPDF_REFLECT(htmlUrl);
 		WKHTMLTOPDF_REFLECT(spacing);
+		WKHTMLTOPDF_REFLECT(lineSpacing);
 	}
 };
 
@@ -363,7 +364,8 @@ HeaderFooter::HeaderFooter():
 	center(""),
 	line(false),
 	htmlUrl(""),
-	spacing(0.0) {}
+	spacing(0.0) {},
+    lineSpacing(0.0) {}
 
 Margin::Margin():
     top(UnitReal(-1,QPrinter::Millimeter)),
